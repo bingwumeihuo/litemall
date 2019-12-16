@@ -10,12 +10,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name: 'litemall',
-    address: 'https://github.com/linlinjava/litemall',
+    name: '爱淘小站',
+    address: 'https://www.dubbo.top/',
     latitude: '31.201900',
     longitude: '121.587839',
-    phone: '021-xxxx-xxxx',
-    qq: '705144434'
+    phone: '17638577891',
+    qq: '1183223389'
   },
 
   /**
@@ -26,7 +26,7 @@ Page({
   },
   getAbout: function () {
     let that = this;
-    util.request(api.AboutUrl).then(function (res) {
+    util.request().then(function (res) {
       if (res.errno === 0) {
         that.setData({
           name: res.data.name,

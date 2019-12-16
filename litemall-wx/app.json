@@ -41,7 +41,7 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "litemall小程序商城",
+    "navigationBarTitleText": "爱淘商城",
     "enablePullDownRefresh": false,
     "navigationBarTextStyle": "black",
     "backgroundColor": "#FFFFFF",
@@ -58,12 +58,6 @@
         "iconPath": "static/images/home.png",
         "selectedIconPath": "static/images/home@selected.png",
         "text": "首页"
-      },
-      {
-        "pagePath": "pages/catalog/catalog",
-        "iconPath": "static/images/category.png",
-        "selectedIconPath": "static/images/category@selected.png",
-        "text": "分类"
       },
       {
         "pagePath": "pages/cart/cart",

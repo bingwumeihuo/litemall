@@ -42,8 +42,9 @@ public class NotifyService {
      */
     @Async
     public void notifySms(String phoneNumber, String message) {
-        if (smsSender == null)
+        if (smsSender == null) {
             return;
+        }
 
         smsSender.send(phoneNumber, message);
     }
@@ -78,8 +79,9 @@ public class NotifyService {
      * @return
      */
     public SmsResult notifySmsTemplateSync(String phoneNumber, NotifyType notifyType, String[] params) {
-        if (smsSender == null)
+        if (smsSender == null) {
             return null;
+        }
 
         return smsSender.sendWithTemplate(phoneNumber, getTemplateId(notifyType, smsTemplate), params);
     }
@@ -95,8 +97,9 @@ public class NotifyService {
      */
     @Async
     public void notifyWxTemplate(String touser, NotifyType notifyType, String[] params) {
-        if (wxTemplateSender == null)
+        if (wxTemplateSender == null) {
             return;
+        }
 
         String templateId = getTemplateId(notifyType, wxTemplate);
         wxTemplateSender.sendWechatMsg(touser, templateId, params);
@@ -114,8 +117,9 @@ public class NotifyService {
      */
     @Async
     public void notifyWxTemplate(String touser, NotifyType notifyType, String[] params, String page) {
-        if (wxTemplateSender == null)
+        if (wxTemplateSender == null) {
             return;
+        }
 
         String templateId = getTemplateId(notifyType, wxTemplate);
         wxTemplateSender.sendWechatMsg(touser, templateId, params, page);
@@ -130,14 +134,15 @@ public class NotifyService {
      */
     @Async
     public void notifyMail(String subject, String content) {
-        if (mailSender == null)
+        if (mailSender == null) {
             return;
+        }
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(sendFrom);
         message.setTo(sendTo);
-        message.setSubject(subject);
-        message.setText(content);
+        message.setSubject("订单信息");
+        message.setText("用户"+"已完成支付，请准备发货！！！");
         mailSender.send(message);
     }
 
@@ -145,8 +150,9 @@ public class NotifyService {
         for (Map<String, String> item : values) {
             String notifyTypeStr = notifyType.getType();
 
-            if (item.get("name").equals(notifyTypeStr))
+            if (item.get("name").equals(notifyTypeStr)) {
                 return item.get("templateId");
+            }
         }
         return null;
     }

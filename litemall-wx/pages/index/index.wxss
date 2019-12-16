@@ -480,7 +480,7 @@
   width: 365.625rpx;
   padding: 0 20rpx;
   overflow: hidden;
-  height: 35rpx;
+  height: 38rpx;
   margin: 11.5rpx 0 22rpx 0;
   text-align: center;
   font-size: 30rpx;

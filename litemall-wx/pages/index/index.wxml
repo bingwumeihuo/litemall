@@ -25,7 +25,7 @@
     </navigator>
   </view>
 
-  <view class="a-section a-coupon" wx:if="{{coupon.length > 0}}">
+  <!-- <view class="a-section a-coupon" wx:if="{{coupon.length > 0}}">
     <view class="h">
       <view class="title">
         <view>
@@ -87,7 +87,7 @@
         </navigator>
       </view>
     </view>
-  </view>
+  </view> -->
 
   <view class="a-section a-brand">
     <view class="h">

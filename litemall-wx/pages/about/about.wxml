@@ -7,7 +7,7 @@
     </view>
   </view>
 
-  <view class="label">项目地址:</view>
+  <view class="label">地址:</view>
   <view class="about-item">
     <view class="item-left">
       <text>{{address}}</text> 
@@ -27,7 +27,7 @@
     </view>
   </view>
 
-  <view class="label">QQ交流群: </view>
+  <view class="label">QQ交流: </view>
   <view class="about-item">
     <view class="item-left">
       <text>{{qq}}</text> 
